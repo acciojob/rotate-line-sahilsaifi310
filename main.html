@@ -1,16 +1,36 @@
+
+
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #line {
+            color: black;
+            width: 200px;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 1px solid black;
+            background-color: black;
+            transform-origin: center center; /* Set rotation point to the center */
+            animation: rotateLine 1s linear infinite; /* Rotate continuously every 1 second */
+        }
+
+        @keyframes rotateLine {
+            0% {
+                transform: rotate(0deg); /* Starting point */
+            }
+            100% {
+                transform: rotate(360deg); /* Complete 360-degree rotation */
+            }
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+    <div id="line"></div>
 </body>
-
-</html>
+</html> 
